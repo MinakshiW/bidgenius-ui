@@ -1,0 +1,75 @@
+.span11{
+    color: #efecee;
+}
+
+.span12{
+    color: #7d1d07;
+}
+
+.inputhover111{
+    box-shadow: 0px 0px 0px;
+    outline: 0px;
+}
+
+
+
+
+
+
+
+/* Color of the links BEFORE scroll */
+.navbar-scroll .nav-link,
+.navbar-scroll .navbar-toggler-icon,
+.navbar-scroll .navbar-brand {
+  color: #fff;
+}
+
+/* Color of the links AFTER scroll */
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-toggler-icon,
+.navbar-scrolled .navbar-brand {
+  color: #fff;
+}
+
+/* Color of the navbar AFTER scroll */
+.navbar-scroll,
+.navbar-scrolled {
+  background-color: #cbbcb1;
+}
+
+.mask-custom {
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, .15);
+}
+
+.navbar-brand {
+  font-size: 1.75rem;
+  letter-spacing: 3px;
+}
+
+.font1111{
+    font-size: large;
+    
+}
+
+.hover111:hover{
+  background-color: #cbbcb1;
+  border-radius: 20px;
+  color: #780d3d;
+}
+
+
+.btnlogout{
+  border-radius: 10px;
+  background-color: rgb(73, 27, 27);
+}
+
+
+.profile-icon{
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid wheat;
+}

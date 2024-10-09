@@ -1,0 +1,93 @@
+.span11{
+    color: #efecee;
+}
+
+.span12{
+    color: #4f0654;
+}
+
+.inputhover111{
+    box-shadow: 0px 0px 0px;
+    outline: 0px;
+}
+
+
+
+
+
+
+
+/* Color of the links BEFORE scroll */
+.navbar-scroll .nav-link,
+.navbar-scroll .navbar-toggler-icon,
+.navbar-scroll .navbar-brand {
+  color: #fff;
+}
+
+/* Color of the links AFTER scroll */
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-toggler-icon,
+.navbar-scrolled .navbar-brand {
+  color: #fff;
+}
+
+/* Color of the navbar AFTER scroll */
+.navbar-scroll,
+.navbar-scrolled {
+  background-color: #cbbcb1;
+}
+
+.mask-custom {
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, .15);
+}
+
+.navbar-brand {
+  font-size: 1.75rem;
+  letter-spacing: 3px;
+}
+
+.font1111{
+    font-size: large;
+}
+
+.hover111:hover{
+  background-color: #cbbcb1;
+  border-radius: 20px;
+  color: #780d3d;
+}
+
+
+.btn333{
+  background-color: #8d9d16;
+-webkit-border-radius: 60px;
+border-radius: 60px;
+border: none;
+color: #cdc8c8;
+cursor: pointer;
+display: inline-block;
+font-family: sans-serif;
+font-size: 15px;
+padding: 5px 8px;
+text-align: center;
+text-decoration: none;
+}
+
+@keyframes glowing1 {
+  0% {
+    background-color: rgb(168, 16, 16);
+    box-shadow: 0 0 3px rgb(168, 16, 16);
+  }
+  50% {
+    background-color: rgb(168, 16, 16);
+    box-shadow: 0 0 10px rgb(168, 16, 16);
+  }
+  100% {
+    background-color: rgb(168, 16, 16);
+    box-shadow: 0 0 3px rgb(168, 16, 16);
+  }
+}
+
+.btn333 {
+  animation: glowing1 1300ms infinite;
+}
