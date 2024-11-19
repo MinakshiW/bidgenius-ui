@@ -9,6 +9,10 @@ root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
+
+  // <AuthContextProvider>
+  //   <App />
+  // </AuthContextProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

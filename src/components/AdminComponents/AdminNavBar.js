@@ -1,10 +1,44 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import './AdminNavBar.css'
 import Person from "../../../node_modules/bootstrap-icons/icons/person.svg"
+import { getTokens, getUserData } from '../../store/tokens'
+import { AI } from '../../APIServices/BidGeniusAPIServices'
 
 
 const AdminNavBar = () => {
+
+  const nav = useNavigate()
+  const { access, refresh } = getTokens()
+  const { username, is_superuser, logged_in } = getUserData()
+
+  async function logoutUser() {
+    console.log('tokenss--')
+    console.log(username)
+    console.log(is_superuser)
+    console.log(logged_in)
+    console.log(access)
+    if (window.confirm(`Do you want to log out ?`)) {
+      try {
+        const res = await AI.post('user/logout/', null, {
+          headers: {
+            'Authorization': `Bearer ${access}`,
+          }
+        });
+        console.log(res)
+        nav(`/login`)
+        sessionStorage.clear()
+      }
+      catch (e) {
+        console.log(e)
+      }
+      finally {
+
+      }
+    }
+  }
+
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light fixed-top mask-custom shadow-0">
@@ -27,7 +61,7 @@ const AdminNavBar = () => {
                 <NavLink className="nav-link hover111 font1111 text-light" to="#!">Bids</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link hover111 font1111 text-light" to="#!">Products</NavLink>
+                <NavLink className="nav-link hover111 font1111 text-light" to="/admin/products">Products</NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link hover111 font1111 text-light" to="#!">Users</NavLink>
@@ -42,25 +76,52 @@ const AdminNavBar = () => {
 
             <ul className="navbar-nav d-flex flex-row">
 
-              
-              <li className="nav-item me-3 pt-2 me-lg-0 pt-1">
-                {/* <NavLink className="nav-link me-2 p-2 text-light" to="#!">
-                  User
-                </NavLink> */}
 
+              {/* <li className="nav-item me-3 pt-2 me-lg-0 pt-1">
                 <NavLink className="nav-link text-light me-2" to="#" >
 
-                  {/* <img src={
+                  not to use 1st img tag
+                  <img src={
                     auth.user.profile_pic ? `http://127.0.0.1:8000${auth.user.profile_pic}` : Person
-                  } */}
+                  } />
+                  
                   <img src={Person}
                     className="me-1 rounded-circle profile-icon"
+                    alt='PersonIcon'
                   />
                   Admin
                 </NavLink>
-              </li>
-              <li className="nav-item me-3 pt-2 me-lg-0 pt-1">
+              </li> */}
+
+              {/* <li className="nav-item me-3 pt-2 me-lg-0 pt-1">
                 <NavLink className="nav-link me-2 btnlogout p-2 text-light" to="#!">
+                  Logout
+                </NavLink>
+              </li> */}
+              {username? 
+              <li className="nav-item me-3 pt-2 me-lg-0 pt-1">
+                <NavLink className="nav-link text-light me-2" to="#" >
+
+                  <img src={Person}
+                    className="me-1 rounded-circle profile-icon"
+                    alt='personicon'
+                  />
+                  {username}
+                </NavLink>
+              </li>
+              :
+              null
+              }
+              
+
+              <li className="nav-item me-3 pt-2 me-lg-0 pt-1">
+                <NavLink className="nav-link me-2 btnlogout p-2 text-light" to="/admin/register">
+                  Register
+                </NavLink>
+              </li>
+
+              <li className="nav-item me-3 pt-2 me-lg-0 pt-1">
+                <NavLink className="nav-link me-2 btnlogout p-2 text-light" onClick={logoutUser}>
                   Logout
                 </NavLink>
               </li>
@@ -69,6 +130,9 @@ const AdminNavBar = () => {
           </div>
         </div>
       </nav>
+      {/* <div id="intro" className="bg-image bgimageadmin vh-100 mask">
+
+      </div> */}
     </div>
   )
 }

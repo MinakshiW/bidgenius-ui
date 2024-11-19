@@ -1,7 +1,6 @@
 import React from 'react'
-import { NavLink, Route, Routes } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './NavBar.css'
-import HomePage from '../HomePage'
 
 const NavBar = () => {
     return (
@@ -43,7 +42,7 @@ const NavBar = () => {
                                 </NavLink>
                             </li>
                             <li className="nav-item me-3 me-lg-0">
-                                <NavLink className="nav-link font1111 hover111" to="#!">
+                                <NavLink className="nav-link font1111 hover111" to="/login">
                                     Login
                                 </NavLink>
                             </li>
