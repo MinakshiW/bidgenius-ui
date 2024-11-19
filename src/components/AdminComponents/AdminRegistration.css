@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    width: 550px;
+    text-align: center;
+    padding: 10px 32px;
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: -1px 4px 28px 0px rgba(0, 0, 0, 0.75);
+    background-color: rgb(224, 224, 224);
+}
+
+.content header {
+    color: #020202;
+    font-size: 33px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.field {
+    position: relative;
+    height: 35px;
+    /* width: 50%; */
+    display: flex;
+    background: rgba(255, 255, 255, 0.94);
+}
+
+.field input {
+    padding-left: 0px;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #222;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.space {
+    margin-top: 16px;
+}
+
+.pass {
+    text-align: left;
+    margin: 10px 0;
+}
+
+.pass a {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+.pass:hover a {
+    text-decoration: underline;
+}
+
+input[type="submit"] {
+    background: linear-gradient(to right, #5f084e 0%, #2e2e9b 100%);
+    border: 1px solid linear-gradient(to right, #0000ff 0%, #202056 100%);
+    ;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(to left, #1a010d 0%, #934f68 100%);
+}
+
+.address1{
+    width: 89%;
+    position: relative;
+    height: 65px;
+    /* width: 50%; */
+    display: flex;
+}
+
+.address1 input {
+    padding-left: 10px;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #222;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.textalign1{
+    text-align: left;
+}
