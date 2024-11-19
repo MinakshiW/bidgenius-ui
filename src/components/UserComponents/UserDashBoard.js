@@ -3,11 +3,14 @@ import UserNavBar from './UserNavBar'
 import { Outlet } from 'react-router-dom'
 import Footer from '../Layout/Footer'
 
+
+
+
 const UserDashBoard = () => {
   return (
     <>
-      <UserNavBar />
-      <Outlet />
+      <UserNavBar />   
+      <Outlet />      
       <Footer/>
     </>
   )

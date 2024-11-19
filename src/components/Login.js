@@ -7,16 +7,21 @@ import { useNavigate } from 'react-router-dom'
 import { AI, AI2 } from '../APIServices/BidGeniusAPIServices'
 import { setTokens } from '../store/tokens'
 
+import axios from 'axios'
+
+
 const Login = () => {
 
   const { register, handleSubmit, setError, reset } = useForm()
   const [serverError, setServerError] = useState(null);
   const nav = useNavigate()
 
+
   async function loginUser(data) {
     setServerError(null);
     try {
       const response = await AI.post('access/', data);
+
       if (response.status === 200) {
         const { access, refresh, username, is_superuser } = response.data;
 

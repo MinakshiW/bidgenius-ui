@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 import axios from "axios"
 
 const BaseUrl = "http://localhost:8000/"
@@ -20,4 +27,6 @@ const AI2 = axios.create({
     }
 })
 
+
 export {AI, AI2}
+

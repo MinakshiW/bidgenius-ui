@@ -17,6 +17,7 @@ export const getUserData = () => {
     const is_superuser = sessionStorage.getItem('is_superuser')
     const logged_in = sessionStorage.getItem('logged_in')
     return { username, is_superuser, logged_in }
+
 }
 
 // export const setLoggedInStatus = (logged_In) => {
@@ -26,4 +27,5 @@ export const getUserData = () => {
 export const getLoggedInStatus = () => {
     const loggedIn = sessionStorage.getItem('logged_in')
     return loggedIn
+
 }

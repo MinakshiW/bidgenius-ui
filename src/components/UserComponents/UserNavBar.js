@@ -59,7 +59,7 @@ const UserNavBar = () => {
                 <NavLink className="nav-link hover111 font1111 text-dark" to="#!">Bids</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link hover111 font1111 text-dark" to="#!">Products</NavLink>
+                <NavLink className="nav-link hover111 font1111 text-dark" to="/user/register">Products</NavLink>
               </li>
             </ul>
 
