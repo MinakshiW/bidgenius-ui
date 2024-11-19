@@ -1,0 +1,43 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 70px; 
+    padding: 50px;
+    
+}
+
+.grid-item {
+    box-shadow: -1px 4px 28px 0px rgba(0, 0, 0, 0.75);
+    border: 1px solid #dee2e6; 
+    border-radius: 20px; 
+    padding: 20px; 
+    text-align: center; 
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); Subtle shadow */
+    transition: transform 0.2s; /* Animation for hover effect */
+}
+
+.grid-item:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+
+.contentAdminP {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    text-align: center;
+    padding: 10px 32px;
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: -1px 4px 28px 0px rgba(0, 0, 0, 0.75);
+    background-color: rgb(224, 224, 224);
+}
+
+.contentAdminP header {
+    color: #020202;
+    font-size: 33px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    font-family: 'Poppins', sans-serif;
+}

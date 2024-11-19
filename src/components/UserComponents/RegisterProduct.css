@@ -1,0 +1,24 @@
+.content {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 999;
+    width: 500px;
+    text-align: center;
+    padding: 30px 32px;
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: -1px 4px 28px 0px rgba(0, 0, 0, 0.75);
+    background-color: #3a0521;
+}
+
+.carousel-container {
+    max-width: 500px;  /* Set the desired max width */
+    margin: 0 auto;    /* Center the carousel */
+}
+
+.carousel-container img {
+    max-height: 300px;  /* Set the desired max height */
+    object-fit: cover;  /* Ensure the image covers the area without distortion */
+}

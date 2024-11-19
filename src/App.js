@@ -4,7 +4,7 @@ import '../node_modules/bootstrap-icons/font/bootstrap-icons.css'
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
 import BidGeniusAppRoutes from './AppRoutes/BidGeniusAppRoutes';
-
+import 'bootstrap/dist/css/bootstrap.min.css'
 function App() {
   return (
 
