@@ -6,7 +6,7 @@ const AdminHomePage = () => {
     <div >
 
       <div id="intro" className="bg-image bgimageadmin vh-100 mask" >
-        {/* <div className="mask bgcolor222"></div> */}
+        {/* not to use <div className="mask bgcolor222"></div> */}
 
 
         {/* <div className='w-50 p-5 m-3 ms-auto'>
